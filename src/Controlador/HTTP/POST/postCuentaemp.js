@@ -1,0 +1,59 @@
+var Empresa=(rutas,passport,bd)=>
+{
+  rutas.post('/Micuentaempresa',(req,res)=>
+  {
+    // console.log(req.body,req);
+    var empresa={
+      //Cuenta
+      Nit:req.body.nit,
+      Foto_empresa:req.body.foto,
+      Pais_empresa:req.body.pais,       
+      Ciudad_empresa:req.body.ciudad, 
+      Nombre_empresa:req.body.nombre,
+      Nombre_responsable:req.body.responsable,
+      Correo_empresa:req.body.correo,
+      Contraseña:req.body.contraseña,        
+      //Mi cuenta
+      Descripcion_empresa:req.body.descripcion,
+      Direccion_empresa:req.body.direccion,
+      Area_empresa:req.body.area,
+      Latitud:req.body.latitud,
+      Longitud:req.body.longitud
+      
+    };
+
+    bd.cruds.crudEmpresa.modificar(empresa,(r)=>{
+      console.log("Empresa modificada correctamente",JSON.stringify(r));
+      res.redirect('/verEmpresa/'+r._id)
+    });
+
+  });
+
+
+  rutas.post("/iniciarsesion",passport.authenticate("local-login",
+  {
+    successRedirect: '/Micuenta',
+    failureRedirect: '/IniciarSesion',
+    failureFlash: true
+  }));
+  rutas.post("/Crearempresa",passport.authenticate("Registrar-empresa",
+    {
+      successRedirect:'/Micuentapersona',
+      failureRedirect: '/Crearempresa',
+      failureFlash: true
+    })
+  );
+
+
+
+}
+
+module.exports= Empresa;
+
+
+
+
+
+
+
+

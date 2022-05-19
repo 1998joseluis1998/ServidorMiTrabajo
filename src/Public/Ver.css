@@ -1,0 +1,92 @@
+.Contenido{
+    width: 100%;
+    z-index: 100;
+    text-align: center;
+    justify-content: center;
+    margin: auto;  
+}
+.Contenido h1 {
+    color: #fff;
+}
+.Contenido-izquierda{
+    width: 35%;
+    background-color: blue;
+    z-index: 101;
+    float: left;
+    margin-left: 10px;
+}
+.Contenido-izquierda img{
+    width: 250px;
+    height: 250px;
+}
+.Contenido-derecha{
+    width: 60%;
+    background-color: rgb(55, 55, 116);
+    z-index: 101; 
+    float: right;  
+    margin-right: 10px;
+}
+.Contenido-derecha p, h1{
+    text-align: left;
+    color:#fff;
+}
+.Contenido-izquierda2{
+    width: 45%;
+    background-color: blue;
+    z-index: 101;
+    float: left;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+.Contenido-derecha2{
+    width: 45%;
+    background-color: rgb(55, 55, 116);
+    z-index: 101; 
+    float: right;  
+    margin-right: 10px;
+    margin-top: 30px;
+}
+.Contenido-derecha2 p, h1{
+    text-align: left;
+    color:#fff;
+}
+.Contenido-izquierda2 p, h1 {
+    text-align: left;
+    color:#fff;
+
+}
+/*footer*/
+.footer{
+ 
+  height: 200px;
+  position: relative;
+}
+.footer_redes_sociales{
+  float: right;
+  width: 43%;
+  margin-top: 85px;
+}
+.footer_redes_sociales h4{
+  text-align: left;
+  font-family: 'FontAwesome Regular' !important;
+  color: #fff;
+  font-size: 25pt;
+}
+.footer_redes_sociales a{
+  color: #fff;
+}
+.footer_redes_sociales a:hover{
+  text-decoration:none;
+  color:#64CFEB;
+}
+.footer_copyright{
+  float: left;
+  width: 50%;
+  margin-top: 80px;
+}
+.footer_copyright h5{
+  text-align: right;
+  font-family: 'Gotham Book' !important;
+  font-size: 25pt;
+  color:#fff;
+}

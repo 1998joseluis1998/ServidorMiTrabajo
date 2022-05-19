@@ -1,0 +1,12 @@
+<%- include("./../Partes/Cabecera.ejs")  %>
+
+<div id="Buscaroferta"></div>
+<% if(typeof datos != 'undefined'){ %>
+    <script>
+        var ret = '<%- JSON.stringify(datos) %>'
+        var datos = JSON.parse(ret);
+        console.log("-------",window.datos)
+    </script>
+<%}%>
+<script src="Buscaroferta.js"></script>
+<%- include("./../Partes/PieDePagina.ejs")  %>

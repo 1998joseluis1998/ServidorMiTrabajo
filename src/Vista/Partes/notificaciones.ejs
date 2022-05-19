@@ -1,0 +1,35 @@
+<% if(confirm != ''){ %>
+    <div class = "confirm alert alert-success" role = "alert">
+        <%= confirm %>
+    </div>
+<%}%>
+<% if(error != ''){ %>
+    <div class = "confirm alert alert-danger" role = "alert">
+        <%= error %>
+    </div>
+<%}%>
+<style media="screen">
+    .error, .confirm
+    {
+      position: absolute;
+      top:50px;
+      left: auto;
+      min-width: 100%;
+      opacity: 90%;
+    }
+  </style>
+  <script type="text/javascript">
+    $(".confirm").click(()=>
+    {
+        $(".confirm").fadeOut(1000,()=>{
+          try {
+            //ordenarFichas(20,20,cont,"ficha");
+
+          } catch (e) {
+
+          } finally {
+
+          }
+        });
+    });
+    </script>
